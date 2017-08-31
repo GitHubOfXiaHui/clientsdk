@@ -1,15 +1,15 @@
 package com.bupt.clientsdk.dto.post;
 
+import java.io.Serializable;
 import java.util.Set;
 
-import com.bupt.clientsdk.dto.BaseRequestDTO;
 import com.bupt.clientsdk.dto.KeywordDTO;
 
-public class PostCreateReqDTO extends BaseRequestDTO {
+public class PostCreateReqDTO implements Serializable {
 
 	private static final long serialVersionUID = 411939355141358278L;
 
-	private String text;
+	private PostDTO post;
 	
 	private Set<KeywordDTO> keywords;
 
@@ -18,18 +18,18 @@ public class PostCreateReqDTO extends BaseRequestDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public PostCreateReqDTO(String text, Set<KeywordDTO> keywords) {
+	public PostCreateReqDTO(PostDTO post, Set<KeywordDTO> keywords) {
 		super();
-		this.text = text;
+		this.post = post;
 		this.keywords = keywords;
 	}
 
-	public String getText() {
-		return text;
+	public PostDTO getPost() {
+		return post;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setPost(PostDTO post) {
+		this.post = post;
 	}
 
 	public Set<KeywordDTO> getKeywords() {
@@ -42,7 +42,7 @@ public class PostCreateReqDTO extends BaseRequestDTO {
 
 	@Override
 	public String toString() {
-		return "PostCreateReqDTO [text=" + text + ", keywords=" + keywords + ", id=" + id + "]";
+		return "PostCreateReqDTO [post=" + post + ", keywords=" + keywords + "]";
 	}
-	
+
 }

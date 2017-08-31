@@ -11,15 +11,14 @@ public abstract class BaseResponseDTO implements Serializable {
 	protected Integer code;
 	protected String msg;
 
-	@SuppressWarnings("unchecked")
-	public static <T> T buildResponse(ResponseEnum type, Class<?> clazz) throws Exception {
-		Object obj = clazz.newInstance();
+	public static <T> T buildResponse(ResponseEnum type, Class<T> clazz) throws Exception {
+		T obj = clazz.newInstance();
 		if (obj instanceof BaseResponseDTO) {
 			BaseResponseDTO response = (BaseResponseDTO) obj;
 			response.code = type.getCode();
 			response.msg = type.getMsg();
 		}
-		return (T) obj;
+		return obj;
 	}
 	
 	public boolean isSuccess() {

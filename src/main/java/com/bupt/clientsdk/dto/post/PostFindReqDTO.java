@@ -15,7 +15,6 @@ public class PostFindReqDTO implements Serializable {
 
 	public PostFindReqDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public PostFindReqDTO(Set<String> keywords, DWZPage page) {

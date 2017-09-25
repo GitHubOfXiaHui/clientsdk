@@ -10,7 +10,6 @@ public class KeywordDTO implements Serializable {
 
 	public KeywordDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public KeywordDTO(String value) {

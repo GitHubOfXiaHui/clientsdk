@@ -15,7 +15,6 @@ public class PostCreateReqDTO implements Serializable {
 
 	public PostCreateReqDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public PostCreateReqDTO(PostDTO post, Set<KeywordDTO> keywords) {

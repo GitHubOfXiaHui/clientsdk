@@ -10,7 +10,6 @@ public class PostDeleteReqDTO implements Serializable {
 
 	public PostDeleteReqDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public PostDeleteReqDTO(Long id) {

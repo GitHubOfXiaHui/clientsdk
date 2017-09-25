@@ -12,7 +12,6 @@ public class PostDTO implements Serializable {
 
 	public PostDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public PostDTO(String text) {

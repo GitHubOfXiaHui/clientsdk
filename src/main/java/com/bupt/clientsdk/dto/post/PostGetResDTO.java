@@ -10,7 +10,6 @@ public class PostGetResDTO extends BaseResponseDTO {
 
 	public PostGetResDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public PostGetResDTO(PostDTO post) {

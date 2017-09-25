@@ -10,7 +10,6 @@ public class PostGetReqDTO implements Serializable {
 
 	public PostGetReqDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public PostGetReqDTO(Long id) {

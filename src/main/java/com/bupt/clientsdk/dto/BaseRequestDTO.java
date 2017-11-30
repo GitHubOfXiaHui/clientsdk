@@ -6,7 +6,7 @@ public abstract class BaseRequestDTO implements Serializable {
 
 	private static final long serialVersionUID = -2816904600143397442L;
 
-	private String user = "0,xiahui";
+	private String user = "0";
 
 	public String getUser() {
 		return user;

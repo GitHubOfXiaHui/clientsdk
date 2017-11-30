@@ -1,8 +1,8 @@
 package com.bupt.clientsdk.dto.post;
 
-import java.io.Serializable;
+import com.bupt.clientsdk.dto.BaseRequestDTO;
 
-public class PostDeleteReqDTO implements Serializable {
+public class PostDeleteReqDTO extends BaseRequestDTO {
 
 	private static final long serialVersionUID = -477250687304617087L;
 

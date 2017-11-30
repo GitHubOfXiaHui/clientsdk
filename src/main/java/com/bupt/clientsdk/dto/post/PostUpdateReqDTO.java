@@ -1,8 +1,8 @@
 package com.bupt.clientsdk.dto.post;
 
-import java.io.Serializable;
+import com.bupt.clientsdk.dto.BaseRequestDTO;
 
-public class PostUpdateReqDTO implements Serializable {
+public class PostUpdateReqDTO extends BaseRequestDTO {
 
 	private static final long serialVersionUID = 463657700331740108L;
 

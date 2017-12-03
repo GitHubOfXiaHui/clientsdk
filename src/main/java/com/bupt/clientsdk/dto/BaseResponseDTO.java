@@ -11,16 +11,13 @@ public abstract class BaseResponseDTO implements Serializable {
 	protected Integer code;
 	protected String msg;
 
-	public static <T> T buildResponse(ResponseEnum type, Class<T> clazz) throws Exception {
-		T obj = clazz.newInstance();
-		if (obj instanceof BaseResponseDTO) {
-			BaseResponseDTO response = (BaseResponseDTO) obj;
-			response.code = type.getCode();
-			response.msg = type.getMsg();
-		}
-		return obj;
+	public static <T extends BaseResponseDTO> T buildResponse(ResponseEnum type, Class<T> clazz) throws Exception {
+		T response = clazz.newInstance();
+		response.code = type.getCode();
+		response.msg = type.getMsg();
+		return response;
 	}
-	
+
 	public boolean isSuccess() {
 		return code != null && code == ResponseEnum.SUCCESS.getCode();
 	}
@@ -40,5 +37,5 @@ public abstract class BaseResponseDTO implements Serializable {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
-	
+
 }
